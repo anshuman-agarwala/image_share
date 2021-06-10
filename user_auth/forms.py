@@ -4,12 +4,6 @@ from django.contrib.auth.password_validation import validate_password, password_
 from .models import AppUser
 
 class AppUserForm(UserCreationForm):
-    password1 = forms.CharField(
-        label="Password",
-        strip=False,
-        widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
-        validators=[validate_password]
-    )
     class Meta(UserCreationForm.Meta):
         model = AppUser
         fields = UserCreationForm.Meta.fields + ('email' ,'first_name', 'last_name')
