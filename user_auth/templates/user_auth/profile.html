@@ -1,0 +1,6 @@
+{% extends "user_auth/base.html" %}
+{% block content %}
+<h2>{{ user.first_name }} {{user.last_name }}</h2>
+<h3>{{ user.email }}</h3>
+<h3>{{ user.date_joined }}</h3>
+{% endblock %}

@@ -1,13 +1,13 @@
 {% extends "user_auth/base.html" %}
 {% block content %}
-    <form method="POST" class="form">
+    <form method="POST">
         {% csrf_token %}
         {% load bootstrap4 %}
         {% bootstrap_css %}
         {% bootstrap_javascript %}
         {% bootstrap_form form %}
         {% buttons %}
-            <input type="submit" value="Submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary">
         {% endbuttons %}
     </form>
 {% endblock %}
